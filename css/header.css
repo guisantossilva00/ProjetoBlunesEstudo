@@ -1,0 +1,157 @@
+
+.nave {
+    height: 70px;
+    margin: 0 30px;
+    width: 100vw;
+}
+
+.menu-logo img{
+    width: 150px;
+}
+.menu-links {
+    width: 50%;
+}
+
+.menu-link {
+    list-style: none;
+    position: relative;
+}
+
+.menu-link-a{
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+.menu-bar{
+    display: none !important;
+}
+
+.menu-input{
+    display: none;
+}
+
+#toggle{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: all .3s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#toggle::before{
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #000;
+    transition: all .3s;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 0 #000;
+}
+
+#toggle.active::before{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 #000;
+}
+
+#toggle::after{
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #000;
+    transition: all .3s;
+    transform: translateY(10px);
+}
+
+#toggle.active::after{
+    transform: translateY(0px) rotate(-45deg);
+}
+
+.menu-link-a:hover{
+    color: var(--color-default-blue);
+    font-weight: bold;
+    border-bottom: 2px solid #a6a6a6;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: -9px;
+    width: 120px;
+    background-color: #fff;
+}
+
+.sub-menu-link{
+    color: var(--color-default-blue);
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.sub-menu li {
+    list-style: none;
+    padding: 6px 10px;
+}
+
+.menu-link:hover > .sub-menu {
+    display: block;
+}
+
+@media screen and (max-width: 1100px) {
+    .menu-links {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu-links {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px ) {
+    .menu-bar {
+        display: flex !important;
+    }
+
+    .menu-links {
+        position: absolute;
+        top: 60px;
+        left: 600px;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .menu-link {
+        width: 120px;
+        margin: 10px ;
+    }
+
+    .ul-menu {
+        width: 100%;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-menu {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 90px;
+    }
+
+    .menu-input:checked ~ .menu-links{
+        transform: translateX(-600px);
+    }
+}
