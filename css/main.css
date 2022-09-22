@@ -31,7 +31,6 @@
 
 .secao-company {
     padding: 50px 0;
-    height: 250px;
     flex-direction: column;
 }
 
@@ -51,10 +50,74 @@
 }
 
 .link-company a {
+    padding: 3px 0;
     color: var(--color-default-blue);
     border-bottom: 2px solid #a6a6a6;
 }
 
+.card {
+    width: 45%;
+    min-width: 350px;
+    margin: 20px 0;
+}
+.card-imagem {
+    position: relative;
+}
+
+.card-imagem img {
+    width: 100%;
+}
+
+.fundo-imagem div {
+    position: absolute;
+    background-color:var(--color-default-blue);
+    height: 99%;
+    opacity: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.icone-seta {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index:10;
+    opacity: 0;
+    color: #fff;
+    font-size: 50px;
+}
+
+.card-texto {
+    margin: 20px 0;
+    height: 85px;
+    flex-direction: column;
+}
+
+.card-texto h1{
+   color: #000;
+   font-size: 33px;
+   padding: 4px 0;
+}
+
+.card-texto p {
+    color: #b3b4c0;
+}
+ .load-more {
+    margin: 50px 0;
+ }
+.load-more a {
+    color: black;
+    font-size: 55px;
+}
+
+@media screen and (max-width: 850px) {
+    .descricao-company {
+        width: 100%;
+    }
+    .card {
+        justify-content: center;
+    }
+}
 @media screen and (max-width: 700px) {
     .titulo-home h1{
         font-size: 100px;

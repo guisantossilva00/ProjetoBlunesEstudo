@@ -126,7 +126,9 @@
     .menu-links {
         position: absolute;
         top: 60px;
-        left: 600px;
+        left: 0;
+        display: none;
+        z-index: 1;
         width: 100%;
         background-color: #fff;
     }
@@ -152,6 +154,6 @@
     }
 
     .menu-input:checked ~ .menu-links{
-        transform: translateX(-600px);
+        display: block;
     }
 }
