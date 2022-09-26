@@ -54,6 +54,7 @@
 
 .contato-footer a:hover {
     border-color: #fff;
+    color: #fff;
 }
 
 .direita-footer {
@@ -70,6 +71,7 @@
 .icone-footer a {
     color: #d6d6d6;
     font-size: 20px;
+    height: 20px;
 }
 
 .icone-footer a img {

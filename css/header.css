@@ -31,6 +31,18 @@
     padding-bottom: 4px;
 }
 
+.menu-link-a:hover{
+    color: var(--color-default-blue);
+    font-weight: bold;
+    border-bottom: 2px solid #a6a6a6;
+}
+
+.menu-link-a-activo {
+    color: var(--color-default-blue);
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-default-blue) !important;
+}
+
 .menu-bar{
     display: none !important;
 }
@@ -82,11 +94,7 @@
     transform: translateY(0px) rotate(-45deg);
 }
 
-.menu-link-a:hover{
-    color: var(--color-default-blue);
-    font-weight: bold;
-    border-bottom: 2px solid #a6a6a6;
-}
+
 
 .sub-menu {
     display: none;
